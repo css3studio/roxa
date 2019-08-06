@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>My custom Bulma website</title>
+    <link rel="stylesheet" href="../css/sleeverary.css"/>
+<!--<link rel="stylesheet" href="../../node_modules/xeicon/xeicon.min.css"/>-->
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/xeicon/2/xeicon.min.css">
+      <script src="../../node_modules/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="test_app">
+
+     <h1 class="title">
+        Bulma <i class="xi-home"></i>
+      </h1>
+
+      <p class="subtitle">
+        {{message}}
+      </p>
+
+      <div class="field">
+        <div class="control">
+          <input class="input" type="text" placeholder="Input" v-model="message">
+        </div>
+      </div>
+
+      <div class="field">
+        <p class="control">
+          <span class="select">
+            <select>
+              <option>Select dropdown</option>
+            </select>
+          </span>
+        </p>
+      </div>
+
+      <div class="buttons">
+        <a class="button is-primary">Primary</a>
+        <a class="button is-link">Link</a>
+      </div>
+    </div>
+  </body>
+<script>
+var test_app = new Vue({
+  el: '#test_app',
+  data: {
+    message: '안녕하세요 Vue!'
+  }
+})
+</script>
+</html>

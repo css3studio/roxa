@@ -1,0 +1,20 @@
+[
+  {
+    "type": "Mheader",
+    "component": "",
+    "props": { 
+      "category": "카테고리",
+      "title": "타이틀 타이틀",
+      "content": "써머리가 들어갑니다.333"      
+    }
+  },
+  {
+    "type": "MsingleHor",
+    "component": "",
+    "props": { 
+      "image": "https://cdn.pixabay.com/photo/2015/06/19/17/58/sample-815141_960_720.jpg",
+      "title": "블로그 싱글아이템 가로형",
+      "content": "써머리가 많이 들어갑니다.777써머리가 많이 들어갑니다.777써머리가 많이 들어갑니다.777"      
+    }
+  }
+]

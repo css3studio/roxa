@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+// Import
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+// 컬러정의
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Bulma 전역변수
+$family-sans-serif:Helvetica,'Noto Sans KR',sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+//$gap : 0;
+
+// Bulma 콤포넌트 변수
+$body-background-color: #fff;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+$footer-background-color: $beige-lighter;
+
+// Import only what you need from Bulma
+@import "node_modules/bulma/sass/utilities/_all.sass";
+@import "node_modules/bulma/sass/base/_all.sass";
+@import "node_modules/bulma/sass/elements/_all.sass";
+@import "node_modules/bulma/sass/form/_all.sass";
+@import "node_modules/bulma/sass/components/navbar.sass";
+@import "node_modules/bulma/sass/components/breadcrumb.sass";
+@import "node_modules/bulma/sass/components/modal.sass";
+@import "node_modules/bulma/sass/layout/footer.sass";
+
+
+/* Layout */
+#main_wrap{overflow:hidden}
+#main-content{clear:both}
+#skip_contents{width:100%;position:relative;z-index:50}
+#skip-link a{display:block;width:100%;height:40px;line-height:40px;text-align:center;position:absolute;top:-40px;left:0;background:#fff;font-size:14px;font-weight:bold;z-index:50}
+#skip-link a:focus{top:0}
+
+header{border-bottom:1px solid #ddd}
+
+.fc01{padding:1rem 0 5rem}
+.fc01 .headerS{padding:0 1rem}
+.fc01_01{padding:1rem 0 5rem 0}
+
+/* objects */
+.ng18{text-align:center}
+.ng18 ul.sns{margin-bottom:1rem}
+.ng18 ul.sns li{display:inline;margin:0 0.2rem}
+.ng18 ul.sns li a i{color:#1c1c1c;font-size:1.25rem;font-weight:600}
+.ng18 ul.sns li a:hover{text-decoration:none}
+.ng18 ul.sns li a:hover i{color:#666}
+.ng18 .btn02{padding:0 3.125rem;font-weight:500}
+
+.ng18_01{overflow:hidden;margin-bottom:5rem}
+.ng18_01 .pagingA{float:left}
+.ng18_01 .slick-dots{bottom:-3rem;position:static;text-align:left;max-width:1140px;margin:0 auto}
+.ng18_01 .slick-dots li button{width:20px;height:20px;border-radius:10px;padding:0;background-color:#5d5d5d}
+.ng18_01 .slick-dots li button:before{content:none}
+.ng18_01 .slick-dots li.slick-active button{background-color:#1d5eff}
+.ng18_01 .snsA{float:right}
+.ng18_01 ul.sns{float:left;margin:0.5rem 1rem 0 0}
+.ng18_01 .btnA{float:right}
+
+
+
+
+/* Bulma 커스터마이즈 */
+.container.is-fluid.nogap{margin-left:0;margin-right:0}
+
+.button{border-radius:0}
