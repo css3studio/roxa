@@ -27,11 +27,10 @@ export default {
 		const baseURI = 'http://localhost:8080/';
 		this.$http.get(`${baseURI}/Exhibition-Blog-Test.json`)
 		.then((result) => {
-			//console.log(result.data)
+			console.log(result.data)
 			this.items = result.data
 			this.items.forEach(function(item) {		//컴포넌트 동적 로딩
-	    		//console.log('name is: ' + item.type)
-				item.component = () => import('@/components/daMdl/Tblog/'+item.type+'.vue');
+				item.component = () => import('@/components/daMdl/'+item.type+'/'+item.name+'.vue');
 			});
 		});
 
@@ -42,26 +41,52 @@ export default {
 	  		/*
 	  		items: [
 	  			{
-	  				type: 'Mheader',
+					type: "Tblog",
+	  				name: 'Mheader',
 	  				component: () => import('@/components/daMdl/Tblog/Mheader.vue'),
 	  				props: { 
 						category: "카테고리",
 						title: "타이틀 타이틀",
 						content: "써머리가 들어갑니다.555"      
 	  				},
-	  			},
-	  			{
-	  				type: 'Mheader',
-	  				component: () => import('@/components/daMdl/Tblog/Mheader.vue'),
-	  				props: { 
-						category: "카테고리2",
-						title: "타이틀 타이틀 타이틀",
-						content: "써머리가 많이 들어갑니다.777"      
-	  				},
-	  			},
+	  			}
 	  		]
 	  		*/
 	  	}
   	}
 }
 </script>
+<style lang="scss">
+/* 컬렉션 공통 */
+.daCol.blog{
+	.Tblog{
+		margin-bottom:2.5rem;
+	}
+	.Tcommon{
+		margin-bottom:2.5rem;
+	}
+	.ng16{
+		margin-bottom:1.2rem;
+	}
+	dl.meta{
+		font-size:0.875rem;
+		font-weight:500;
+		line-height:1.5rem;
+		overflow:hidden;
+		dt{
+			float:left;
+			margin-right:0.5rem;
+			&:after{
+				content:","
+			}
+		}
+		dd{
+			display:inline;
+			span{
+				float:left;
+				margin-right:0.5rem;
+			}
+		}
+	}
+} 
+</style>

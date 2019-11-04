@@ -6,22 +6,10 @@ Version:1.0
 //네이티브 코드 영역
 document.addEventListener('DOMContentLoaded', () => {
 
-	//이미지 가로-세로 비율 표시
-	var imgs = document.querySelectorAll('img');
-	imgs.forEach(function(currentValue, index, array) {
-		var img = new Image();
-		img.src = currentValue.getAttribute('src');
-		var this_img = currentValue;
-		img.onload = function() {
-			var fillClass = (img.height > img.width)
-				    ? 'fillheight' : 'fillwidth';
-			this_img.classList.add(fillClass);
-		};
-
-	});
-
 });
 
+
+/*
 //제이쿼리 코드 영역
 function jquery_define(){
 
@@ -110,5 +98,5 @@ function load_css(href){
 	head.appendChild(link);	
 }
 
-
+*/
 
