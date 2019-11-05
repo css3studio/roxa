@@ -1,10 +1,7 @@
 <template>
 	<!-- 콜랙션 컨테이너 영역 -->
 	<section class="daCol blog">
-		<component v-for="item in items" :is="item.component" v-bind="item.props"></component>
-		<!-- Tblog Mheader 
-    	<Mheader title="블로그형 기본 정보입니다" category="카테고리명" content="써머리 내용이 들어갑니다"/>
-    	-->
+		<component v-for="item in items" :key="item.name" :is="item.component" v-bind="item.props"></component>
     </section>
  </div>
 </template>
